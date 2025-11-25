@@ -66,6 +66,48 @@ export default function TabsLayout() {
           ),
         }}
       />
+
+      <Tabs.Screen
+  name="soil"
+  options={{
+    title: "Soil",
+    tabBarIcon: ({ color, size }) => (
+      <Ionicons name="leaf" size={size} color={color} />
+    ),
+  }}
+/>
+
+<Tabs.Screen
+  name="light"
+  options={{
+    title: "Light",
+    tabBarIcon: ({ color, size }) => (
+      <Ionicons name="sunny" size={size} color={color} />
+    ),
+  }}
+/>
+
+
+<Tabs.Screen
+  name="temperature"
+  options={{
+    title: "Temp",
+    tabBarIcon: ({ color, size }) => (
+      <Ionicons name="thermometer" size={size} color={color} />
+    ),
+  }}
+/>
+
+<Tabs.Screen
+  name="humidity"
+  options={{
+    title: "Humidity",
+    tabBarIcon: ({ color, size }) => (
+      <Ionicons name="water" size={size} color={color} />
+    ),
+  }}
+/>
+
     </Tabs>
   );
 }
