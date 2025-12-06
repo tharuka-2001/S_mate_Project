@@ -6,53 +6,52 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: "#4CAF50",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: "#000000",
+        tabBarInactiveTintColor: "#9CA3AF",
         tabBarStyle: {
-          backgroundColor: "#fff",
-          borderTopWidth: 1,
-          borderTopColor: "#e0e0e0",
-          height: 60,
-          paddingBottom: 5,
+          backgroundColor: "#FFFFFF",
+          borderTopWidth: 0,
+          height: 65,
+          paddingBottom: 8,
+          paddingTop: 8,
+          elevation: 8,
+          shadowColor: "#000",
+          shadowOffset: { width: 0, height: -4 },
+          shadowOpacity: 0.1,
+          shadowRadius: 12,
+        },
+        tabBarLabelStyle: {
+          fontSize: 11,
+          fontWeight: "600",
         },
       }}
     >
       <Tabs.Screen
-        name="dashboard"
+        name="home"
         options={{
-          title: "Dashboard",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" size={size} color={color} />
+          title: "Home",
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons name={focused ? "home" : "home-outline"} size={size} color={color} />
           ),
         }}
       />
 
       <Tabs.Screen
-        name="manual-control"
+        name="monitor"
+        options={{
+          title: "Monitor",
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons name={focused ? "analytics" : "analytics-outline"} size={size} color={color} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="control"
         options={{
           title: "Control",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="settings" size={size} color={color} />
-          ),
-        }}
-      />
-
-      <Tabs.Screen
-        name="schedule"
-        options={{
-          title: "Schedule",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="calendar" size={size} color={color} />
-          ),
-        }}
-      />
-
-      <Tabs.Screen
-        name="notifications"
-        options={{
-          title: "Alerts",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="notifications" size={size} color={color} />
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons name={focused ? "options" : "options-outline"} size={size} color={color} />
           ),
         }}
       />
@@ -61,53 +60,62 @@ export default function TabsLayout() {
         name="settings"
         options={{
           title: "Settings",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="person" size={size} color={color} />
+          tabBarIcon: ({ color, size, focused }) => (
+            <Ionicons name={focused ? "settings" : "settings-outline"} size={size} color={color} />
           ),
         }}
       />
 
+      {/* Hide old screens from tabs */}
       <Tabs.Screen
-  name="soil"
-  options={{
-    title: "Soil",
-    tabBarIcon: ({ color, size }) => (
-      <Ionicons name="leaf" size={size} color={color} />
-    ),
-  }}
-/>
-
-<Tabs.Screen
-  name="light"
-  options={{
-    title: "Light",
-    tabBarIcon: ({ color, size }) => (
-      <Ionicons name="sunny" size={size} color={color} />
-    ),
-  }}
-/>
-
-
-<Tabs.Screen
-  name="temperature"
-  options={{
-    title: "Temp",
-    tabBarIcon: ({ color, size }) => (
-      <Ionicons name="thermometer" size={size} color={color} />
-    ),
-  }}
-/>
-
-<Tabs.Screen
-  name="humidity"
-  options={{
-    title: "Humidity",
-    tabBarIcon: ({ color, size }) => (
-      <Ionicons name="water" size={size} color={color} />
-    ),
-  }}
-/>
-
+        name="dashboard"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="manual-control"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="schedule"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="notifications"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="soil"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="light"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="temperature"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="humidity"
+        options={{
+          href: null,
+        }}
+      />
     </Tabs>
   );
 }
+
