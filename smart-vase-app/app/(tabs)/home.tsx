@@ -19,49 +19,38 @@ export default function Home() {
             <ScrollView
                 className="flex-1"
                 showsVerticalScrollIndicator={false}
-                contentContainerStyle={{ padding: 20 }}
+                contentContainerStyle={{ padding: 20}}
             >
                 {/* Header */}
-                <View className="flex-row justify-between items-center mb-6 mt-8">
+                <View className="flex-row justify-between items-center mb-6 mt-16">
                     <View>
                         <Text className="text-sm text-gray-400 mb-1">Welcome back</Text>
                         <Text className="text-3xl font-bold text-black">Smart Vase</Text>
                     </View>
                     <View className="flex-row items-center bg-black px-3 py-1.5 rounded-full">
-                        <View className="w-2 h-2 rounded-full bg-white mr-1.5" />
+                        <View className="w-2 h-2 rounded-full bg-[#c2e153] mr-1.5" />
                         <Text className="text-xs font-semibold text-white">Online</Text>
                     </View>
                 </View>
 
                 {/* System Health Card - Hero Style */}
-                <View className="mb-6 rounded-2xl overflow-hidden" style={{
-                    shadowColor: '#000',
-                    shadowOffset: { width: 0, height: 4 },
-                    shadowOpacity: 0.1,
-                    shadowRadius: 12,
-                    elevation: 6,
-                }}>
-                    <LinearGradient
-                        colors={['#000000', '#1a1a1a']}
-                        start={{ x: 0, y: 0 }}
-                        end={{ x: 1, y: 1 }}
-                        className="p-6"
-                    >
+                <View className="mb-6 rounded-2xl overflow-hidden" >
+                    
                         <View className="flex-row items-center">
-                            <View className="w-14 h-14 rounded-full bg-white/10 justify-center items-center">
-                                <Ionicons name="checkmark-circle-outline" size={32} color="#fff" />
+                            <View className="w-14 h-14 rounded-full bg-black/10 justify-center items-center">
+                                <Ionicons name="checkmark-circle-outline" size={32} color="#000" />
                             </View>
                             <View className="flex-1 ml-4">
-                                <Text className="text-xs text-white/60 mb-1">System Status</Text>
-                                <Text className="text-2xl font-bold text-white mb-0.5">{systemHealth}</Text>
-                                <Text className="text-xs text-white/80">All systems operational</Text>
+                                <Text className="text-xs text-black mb-1">System Status</Text>
+                                <Text className="text-2xl font-bold text-black mb-0.5">{systemHealth}</Text>
+                                <Text className="text-xs text-black">All systems operational</Text>
                             </View>
                             <View className="items-center bg-white/10 px-4 py-2 rounded-xl">
-                                <Text className="text-xl font-bold text-white">98%</Text>
-                                <Text className="text-[10px] text-white/60 mt-0.5">Efficiency</Text>
+                                <Text className="text-2xl font-bold text-black">98%</Text>
+                                <Text className="text-[10px] text-black mt-0.5">Efficiency</Text>
                             </View>
                         </View>
-                    </LinearGradient>
+                   
                 </View>
 
                 {/* Quick Stats Grid */}
@@ -74,9 +63,9 @@ export default function Home() {
                         </View>
                         <Text className="text-3xl font-bold text-black mb-1">{waterLevel}%</Text>
 
-                        <View className="h-1 bg-gray-100 rounded-sm overflow-hidden">
+                        <View className="h-2 bg-gray-200 rounded-xl overflow-hidden">
                             <View
-                                className="h-full rounded-sm bg-black"
+                                className="h-full rounded-sm bg-[#7dd8c6]"
                                 style={{ width: `${waterLevel}%` }}
                             />
                         </View>
@@ -91,7 +80,7 @@ export default function Home() {
                         </View>
                         <Text className="text-3xl font-bold text-black mb-1">{soilMoisture}%</Text>
 
-                        <View className="h-1 bg-gray-100 rounded-sm overflow-hidden">
+                        <View className="h-2 bg-gray-200 rounded-xl overflow-hidden">
                             <View
                                 className="h-full rounded-sm bg-black"
                                 style={{ width: `${soilMoisture}%` }}
@@ -101,16 +90,16 @@ export default function Home() {
 
 
                     {/* Temperature Card */}
-                    <View className="flex-1 min-w-[47%] p-4 rounded-2xl shadow-sm" style={{ backgroundColor: '#FFFFFF', shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.2, shadowRadius: 16, elevation: 8 }}>
+                    <View className="flex-1 min-w-[47%] p-4 rounded-2xl shadow-sm" style={{ backgroundColor: '#000000', shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.2, shadowRadius: 16, elevation: 8 }}>
                         <View className="flex-row items-center gap-2 mb-5">
-                            <Ionicons name="thermometer-outline" size={20} color="#000" />
+                            <Ionicons name="thermometer-outline" size={20} color="#fff" />
                             <Text className="text-lg text-gray-400">Temperature</Text>
                         </View>
-                        <Text className="text-3xl font-bold text-black mb-1">{temperature}°C</Text>
+                        <Text className="text-3xl font-bold text-white mb-1">{temperature}°C</Text>
 
                         <View className="flex-row items-center">
                             <Ionicons name="trending-up" size={14} color="#000" />
-                            <Text className="text-xs text-gray-600 ml-1">+2°</Text>
+                            <Text className="text-xs text-gray-200 ml-1">+2°</Text>
                         </View>
                     </View>
 
@@ -135,7 +124,7 @@ export default function Home() {
                     <Text className="text-sm text-gray-400">Chemical composition</Text>
                 </View>
 
-                <View className="bg-white rounded-2xl p-6 mb-6" style={{
+                <View className="bg-[#ffffff] rounded-3xl p-6 mb-6" style={{
                     shadowColor: '#000',
                     shadowOffset: { width: 0, height: 8 },
                     shadowOpacity: 0.1,
@@ -145,11 +134,11 @@ export default function Home() {
                     <View className="flex-row justify-around items-end">
                         {/* C1 Cylinder */}
                         <View className="items-center">
-                            <Text className="text-xs text-gray-400 mb-2">{fertilizer.c1}/3</Text>
+                            <Text className="text-xs text-gray-800 mb-2">{fertilizer.c1}/3</Text>
                             <View className="w-16 h-32 bg-gray-100 rounded-full overflow-hidden relative" >
                                 {/* Fill */}
                                 <View
-                                    className="absolute bottom-0 left-0 right-0 bg-black rounded-b-lg"
+                                    className="absolute bottom-0 left-0 right-0 bg-[#7dd8c6] rounded-b-lg"
                                     style={{
                                         height: `${(fertilizer.c1 / 3) * 100}%`,
                                     }}
@@ -160,14 +149,14 @@ export default function Home() {
 
                         {/* C2 Cylinder */}
                         <View className="items-center">
-                            <Text className="text-xs text-gray-400 mb-2">{fertilizer.c2}/3</Text>
-                            <View className="w-16 h-32 bg-gray-100 rounded-full overflow-hidden relative" >
+                            <Text className="text-xs text-gray-800 mb-2">{fertilizer.c2}/3</Text>
+                            <View className="w-16 h-32 bg-gray-200 rounded-full overflow-hidden relative" >
                                 {/* Fill */}
                                 <View
                                     className="absolute bottom-0 left-0 right-0 roundedfull"
                                     style={{
                                         height: `${(fertilizer.c2 / 3) * 100}%`,
-                                        backgroundColor: '#666'
+                                        backgroundColor: '#7dd8c6'
                                     }}
                                 />
                             </View>
@@ -176,14 +165,14 @@ export default function Home() {
 
                         {/* C3 Cylinder */}
                         <View className="items-center">
-                            <Text className="text-xs text-gray-400 mb-2">{fertilizer.c3}/3</Text>
-                            <View className="w-16 h-32 bg-gray-100 rounded-full overflow-hidden relative" >
+                            <Text className="text-xs text-gray-800 mb-2">{fertilizer.c3}/3</Text>
+                            <View className="w-16 h-32 bg-gray-200 rounded-full overflow-hidden relative" >
                                 {/* Fill */}
                                 <View
                                     className="absolute bottom-0 left-0 right-0 rounded-b-full"
                                     style={{
                                         height: `${(fertilizer.c3 / 3) * 100}%`,
-                                        backgroundColor: '#999'
+                                        backgroundColor: '#7dd8c6'
                                     }}
                                 />
                             </View>

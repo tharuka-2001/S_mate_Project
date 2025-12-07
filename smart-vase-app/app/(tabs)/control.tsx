@@ -81,33 +81,88 @@ export default function Control() {
                 {/* Manual Controls Section */}
                 <Text className="text-xl font-bold text-black mb-4 mt-2">Manual Controls</Text>
 
-                <ActionButton
-                    title="Start Watering — Line 1"
-                    icon="water-outline"
-                    variant="secondary"
-                    onPress={() => console.log('Water Line 1')}
-                />
+                {/* 2x2 Grid of Control Cards */}
+                <View className="flex-row flex-wrap gap-3 mb-4">
+                    {/* Water Line 1 Card */}
+                    <TouchableOpacity
+                        className="flex-1 min-w-[47%] bg-white rounded-2xl p-5"
+                        style={{
+                            shadowColor: '#000',
+                            shadowOffset: { width: 0, height: 8 },
+                            shadowOpacity: 0.1,
+                            shadowRadius: 16,
+                            elevation: 8,
+                        }}
+                        onPress={() => console.log('Water Line 1')}
+                        activeOpacity={0.7}
+                    >
+                        <View className="w-12 h-12 rounded-xl bg-gray-100 justify-center items-center mb-3">
+                            <Ionicons name="water-outline" size={24} color="#000" />
+                        </View>
+                        <Text className="text-base font-bold text-black mb-1">Water Line 1</Text>
+                        <Text className="text-xs text-gray-400">Start watering</Text>
+                    </TouchableOpacity>
 
-                <ActionButton
-                    title="Start Watering — Line 2"
-                    icon="water-outline"
-                    variant="secondary"
-                    onPress={() => console.log('Water Line 2')}
-                />
+                    {/* Water Line 2 Card */}
+                    <TouchableOpacity
+                        className="flex-1 min-w-[47%] bg-white rounded-2xl p-5"
+                        style={{
+                            shadowColor: '#000',
+                            shadowOffset: { width: 0, height: 8 },
+                            shadowOpacity: 0.1,
+                            shadowRadius: 16,
+                            elevation: 8,
+                        }}
+                        onPress={() => console.log('Water Line 2')}
+                        activeOpacity={0.7}
+                    >
+                        <View className="w-12 h-12 rounded-xl bg-gray-100 justify-center items-center mb-3">
+                            <Ionicons name="water-outline" size={24} color="#000" />
+                        </View>
+                        <Text className="text-base font-bold text-black mb-1">Water Line 2</Text>
+                        <Text className="text-xs text-gray-400">Start watering</Text>
+                    </TouchableOpacity>
 
-                <ActionButton
-                    title="Start Fertilizing"
-                    icon="leaf-outline"
-                    variant="primary"
-                    onPress={() => console.log('Fertilize')}
-                />
+                    {/* Fertilizing Card */}
+                    <TouchableOpacity
+                        className="flex-1 min-w-[47%] bg-white rounded-2xl p-5"
+                        style={{
+                            shadowColor: '#000',
+                            shadowOffset: { width: 0, height: 8 },
+                            shadowOpacity: 0.1,
+                            shadowRadius: 16,
+                            elevation: 8,
+                        }}
+                        onPress={() => console.log('Fertilize')}
+                        activeOpacity={0.7}
+                    >
+                        <View className="w-12 h-12 rounded-xl bg-gray-100 justify-center items-center mb-3">
+                            <Ionicons name="leaf-outline" size={24} color="#000" />
+                        </View>
+                        <Text className="text-base font-bold text-black mb-1">Fertilizing</Text>
+                        <Text className="text-xs text-gray-400">Start fertilizing</Text>
+                    </TouchableOpacity>
 
-                <ActionButton
-                    title="STOP ALL OPERATIONS"
-                    icon="alert-circle-outline"
-                    variant="danger"
-                    onPress={() => console.log('Emergency Stop')}
-                />
+                    {/* Emergency Stop Card */}
+                    <TouchableOpacity
+                        className="flex-1 min-w-[47%] bg-black rounded-2xl p-5"
+                        style={{
+                            shadowColor: '#000',
+                            shadowOffset: { width: 0, height: 8 },
+                            shadowOpacity: 0.3,
+                            shadowRadius: 16,
+                            elevation: 8,
+                        }}
+                        onPress={() => console.log('Emergency Stop')}
+                        activeOpacity={0.7}
+                    >
+                        <View className="w-12 h-12 rounded-xl bg-white/20 justify-center items-center mb-3">
+                            <Ionicons name="alert-circle-outline" size={24} color="#fff" />
+                        </View>
+                        <Text className="text-base font-bold text-white mb-1">STOP ALL</Text>
+                        <Text className="text-xs text-white/60">Emergency stop</Text>
+                    </TouchableOpacity>
+                </View>
 
                 {/* Schedule Section */}
                 <Text className="text-xl font-bold text-black mb-4 mt-4">Watering Schedule</Text>

@@ -53,12 +53,12 @@ export default function Monitor() {
     ];
 
     return (
-        <View className="flex-1 bg-[#f9f9f9]">
+        <View className="flex-1 bg-[#f9f9f9] mt-16">
             <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF" />
 
             {/* Header */}
-            <View className="px-5 pt-12 pb-4">
-                <Text className="text-sm text-gray-400 mb-1">Real-time monitoring</Text>
+            <View className="px-5 pt-12 pb-4 text-center">
+                
                 <Text className="text-3xl font-bold text-black">Sensor Monitor</Text>
             </View>
 
