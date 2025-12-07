@@ -46,13 +46,13 @@ export default function Control() {
                 contentContainerStyle={{ padding: 20 }}
             >
                 {/* Header */}
-                <View className="mb-6 mt-8">
-                    <Text className="text-sm text-gray-400 mb-1">Manual & automated</Text>
-                    <Text className="text-3xl font-bold text-black">Control Center</Text>
+                <View className="mb-6 mt-16">
+                    
+                    <Text className="text-2xl font-bold text-black">Control Center</Text>
                 </View>
 
                 {/* Auto Mode Toggle */}
-                <View className="bg-white rounded-2xl p-5 mb-4" style={{
+                <View className="bg-black rounded-3xl p-5 mb-4" style={{
                     shadowColor: '#000',
                     shadowOffset: { width: 0, height: 8 },
                     shadowOpacity: 0.1,
@@ -61,10 +61,10 @@ export default function Control() {
                 }}>
                     <View className="flex-row items-center justify-between">
                         <View className="flex-row items-center flex-1">
-                            <Ionicons name="flash-outline" size={24} color="#000" />
+                            <Ionicons name="flash-outline" size={24} color="#fff" />
                             <View className="ml-4 flex-1">
-                                <Text className="text-base font-bold text-black">Automation Mode</Text>
-                                <Text className="text-sm text-gray-400">
+                                <Text className="text-base font-bold text-white">Automation Mode</Text>
+                                <Text className="text-sm text-gray-300">
                                     {autoMode ? 'Schedules active' : 'Manual control only'}
                                 </Text>
                             </View>
@@ -73,7 +73,7 @@ export default function Control() {
                             value={autoMode}
                             onValueChange={setAutoMode}
                             trackColor={{ false: '#e5e5e5', true: '#666' }}
-                            thumbColor={autoMode ? '#000' : '#fff'}
+                            thumbColor={autoMode ? '#7dd8c6' : '#fff'}
                         />
                     </View>
                 </View>
@@ -176,7 +176,7 @@ export default function Control() {
                 }}>
                     <Text className="text-lg font-bold text-black mb-4">Add New Schedule</Text>
 
-                    <Text className="text-xs text-gray-400 mb-2 mt-2">Time (24h format)</Text>
+                    <Text className="text-xs text-gray-600 mb-2 mt-2">Time (24h format)</Text>
                     <TextInput
                         className="border border-gray-200 rounded-xl p-4 text-black bg-gray-50 mb-3"
                         placeholder="07:30"
@@ -185,7 +185,7 @@ export default function Control() {
                         placeholderTextColor="#9CA3AF"
                     />
 
-                    <Text className="text-xs text-gray-400 mb-2">Water Line (1-4)</Text>
+                    <Text className="text-xs text-gray-600 mb-2">Water Line (1-4)</Text>
                     <TextInput
                         className="border border-gray-200 rounded-xl p-4 text-black bg-gray-50 mb-3"
                         placeholder="1"
@@ -195,7 +195,7 @@ export default function Control() {
                         placeholderTextColor="#9CA3AF"
                     />
 
-                    <Text className="text-xs text-gray-400 mb-2">Water Amount (ml)</Text>
+                    <Text className="text-xs text-gray-600 mb-2">Water Amount (ml)</Text>
                     <TextInput
                         className="border border-gray-200 rounded-xl p-4 text-black bg-gray-50 mb-4"
                         placeholder="500"

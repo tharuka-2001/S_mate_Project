@@ -31,9 +31,9 @@ export default function Settings() {
                 contentContainerStyle={{ padding: 20 }}
             >
                 {/* Header */}
-                <View className="mb-6 mt-8">
-                    <Text className="text-sm text-gray-400 mb-1">Device configuration</Text>
-                    <Text className="text-3xl font-bold text-black">Settings</Text>
+                <View className="mb-6 mt-16">
+                    
+                    <Text className="text-2xl font-bold text-black">Settings</Text>
                 </View>
 
                 {/* WiFi Configuration */}
